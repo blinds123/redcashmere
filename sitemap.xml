@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://redcashmere.netlify.app/</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://redcashmere.netlify.app/images/product/Gemini_Generated_Image_oslxkboslxkboslx.png</image:loc>
+      <image:title>Red Cashmere Sweater - Front View</image:title>
+      <image:caption>Luxuriously soft 100% pure cashmere sweater in rich red</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://redcashmere.netlify.app/images/product/Gemini_Generated_Image_378hjy378hjy378h.png</image:loc>
+      <image:title>Red Cashmere Sweater - Detail View</image:title>
+      <image:caption>Close-up of premium cashmere fabric texture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://redcashmere.netlify.app/images/product/Gemini_Generated_Image_s3sr1ps3sr1ps3sr.png</image:loc>
+      <image:title>Red Cashmere Sweater - Lifestyle View</image:title>
+      <image:caption>Red cashmere sweater lifestyle photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://redcashmere.netlify.app/images/product/Gemini_Generated_Image_38baq438baq438ba.png</image:loc>
+      <image:title>Red Cashmere Sweater - Side View</image:title>
+      <image:caption>Side profile of red cashmere crew neck sweater</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://redcashmere.netlify.app/images/product/Gemini_Generated_Image_ljp9fdljp9fdljp9.png</image:loc>
+      <image:title>Red Cashmere Sweater - Back View</image:title>
+      <image:caption>Back view of luxury cashmere sweater</image:caption>
+    </image:image>
+  </url>
+</urlset>

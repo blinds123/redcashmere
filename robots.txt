@@ -1,0 +1,25 @@
+# robots.txt for redcashmere.netlify.app
+
+User-agent: *
+Allow: /
+Disallow: /sw.js
+
+# Sitemap location
+Sitemap: https://redcashmere.netlify.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Allow Google and Bing image indexing
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /images/
