@@ -646,7 +646,8 @@ async function getExchangeFromPool(amountUSD) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 15000);
 
-    const response = await fetch(`${SIMPLESWAP_POOL_API}/buy-now`, {
+    // Use Netlify function proxy to bypass CORS
+    const response = await fetch('/.netlify/functions/buy-now', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ amountUSD: amountUSD }),
