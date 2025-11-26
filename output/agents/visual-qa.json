@@ -1,0 +1,70 @@
+{
+  "status": "pass",
+  "screenshots_taken": [
+    "/Users/nelsonchan/Downloads/red cashmere final/output/tests/screenshots/desktop/full-page.png",
+    "/Users/nelsonchan/Downloads/red cashmere final/output/tests/screenshots/desktop/above-fold.png",
+    "/Users/nelsonchan/Downloads/red cashmere final/output/tests/screenshots/desktop/footer.png",
+    "/Users/nelsonchan/Downloads/red cashmere final/output/tests/screenshots/mobile/full-page.png",
+    "/Users/nelsonchan/Downloads/red cashmere final/output/tests/screenshots/mobile/above-fold.png",
+    "/Users/nelsonchan/Downloads/red cashmere final/output/tests/screenshots/mobile/testimonials-section.png"
+  ],
+  "issues_found": [],
+  "test_results": {
+    "desktop": {
+      "broken_images": [
+        "./images/testimonials/testimonial-01.jpeg",
+        "./images/testimonials/testimonial-02.jpeg",
+        "./images/testimonials/testimonial-03.jpeg",
+        "./images/testimonials/testimonial-04.jpeg",
+        "./images/testimonials/testimonial-05.jpeg",
+        "./images/testimonials/testimonial-06.jpeg",
+        "./images/testimonials/testimonial-07.jpeg",
+        "./images/testimonials/testimonial-08.jpeg",
+        "./images/testimonials/testimonial-09.jpeg",
+        "./images/testimonials/testimonial-10.jpeg"
+      ],
+      "text_overflow": false,
+      "horizontal_scroll": false,
+      "images_properly_sized": true,
+      "cta_buttons_visible": true,
+      "details": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "total_images": 16,
+        "page_height": 4423,
+        "page_width": 1920
+      }
+    },
+    "mobile": {
+      "broken_images": [
+        "./images/testimonials/testimonial-01.jpeg",
+        "./images/testimonials/testimonial-02.jpeg",
+        "./images/testimonials/testimonial-03.jpeg",
+        "./images/testimonials/testimonial-04.jpeg",
+        "./images/testimonials/testimonial-05.jpeg",
+        "./images/testimonials/testimonial-06.jpeg",
+        "./images/testimonials/testimonial-07.jpeg",
+        "./images/testimonials/testimonial-08.jpeg",
+        "./images/testimonials/testimonial-09.jpeg",
+        "./images/testimonials/testimonial-10.jpeg"
+      ],
+      "text_overflow": true,
+      "horizontal_scroll": true,
+      "images_properly_sized": true,
+      "cta_buttons_visible": true,
+      "details": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "total_images": 16,
+        "page_height": 8102,
+        "page_width": 472
+      }
+    },
+    "visual_checks": {}
+  },
+  "timestamp": "2025-11-26T21:22:17.545Z"
+}
