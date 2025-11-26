@@ -88,31 +88,18 @@ img{max-width:100%;height:auto}
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
-/* Testimonial Styles - Bluesneaker Style */
-.testimonial-card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.04);border:1px solid #f0f0f0;transition:all 0.3s ease;display:flex;flex-direction:column;align-items:center}
+/* Testimonial Styles */
+.testimonial-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,0.08);border:2px solid #f0f0f0;transition:all 0.3s ease}
 .testimonial-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(139,41,66,0.15);border-color:#8B2942}
-.testimonial-image-container{padding:15px 0;text-align:center;width:100%}
-.testimonial-image{width:30%;max-width:200px;height:auto;border-radius:8px;object-fit:contain;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
-.testimonial-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;width:100%}
-.testimonial-info{flex:1;text-align:left}
-.testimonial-name{font-weight:600;font-size:14px;margin-bottom:3px;color:#1a1a1a}
+.testimonial-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.testimonial-avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;border:3px solid #8B2942}
+.testimonial-info{flex:1}
+.testimonial-name{font-weight:700;font-size:15px;margin-bottom:3px;color:#1a1a1a}
 .testimonial-platform{display:flex;align-items:center;gap:6px;color:#666;font-size:12px;font-weight:600}
 .testimonial-platform svg{width:16px;height:16px}
-.testimonial-stars{color:#8B2942;font-size:16px;letter-spacing:2px;text-align:right}
-.testimonial-text{font-size:14px;line-height:1.5;color:#333;font-weight:400;width:100%;text-align:left}
-.testimonial-date{color:#999;font-size:12px;margin-top:12px;font-weight:500;width:100%;text-align:right}
-
-
-
-
-
-
-
-
-
-
-
-
+.testimonial-stars{color:#ffc107;font-size:16px;letter-spacing:2px;text-shadow:0 1px 2px rgba(0,0,0,0.1)}
+.testimonial-text{font-size:15px;line-height:1.7;color:#333;font-weight:400}
+.testimonial-date{color:#999;font-size:12px;margin-top:12px;font-weight:500}
 
 /* Size Selector */
 .size-btn{padding:14px 12px;border:2px solid #e0e0e0;background:#fff;border-radius:8px;cursor:pointer;font-weight:600;transition:all 0.2s;font-size:14px}
@@ -691,20 +678,17 @@ function handleAddToCart(type) {
   perfMetrics.mark(`cta-clicked-${type}`);
   window.currentOrderType = type;
 
-  // Set default size if none selected
   if (!window.selectedSize) {
-    window.selectedSize = 'M';
+    const sizeSection = document.querySelector('.size-grid');
+    if (sizeSection) {
+      sizeSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      sizeSection.style.animation = 'pulse 1s ease-in-out';
+    }
+    return;
   }
 
-  // Only show order bump popup for pre-order ($19) tier
-  if (type === 'secondary') {
-    showOrderBumpPopup(type);
-  } else {
-    // Primary tier ($59) - skip popup, go straight to checkout
-    processOrder(59);
-  }
+  showOrderBumpPopup(type);
 }
-
 
 function showOrderBumpPopup(type) {
   const basePrice = type === 'primary' ? 59 : 19;
@@ -968,10 +952,8 @@ function loadRemainingContent() {
 function renderTestimonials(count) {
   return testimonials.slice(0, count).map(t => `
     <div class="testimonial-card">
-      <div class="testimonial-image-container">
-        <img src="./images/testimonials/${testimonialImages[t.img]}" alt="${t.name} wearing red cashmere sweater" class="testimonial-image" loading="lazy">
-      </div>
       <div class="testimonial-header">
+        <img src="./images/testimonials/${testimonialImages[t.img]}" alt="${t.name}" class="testimonial-avatar" loading="lazy">
         <div class="testimonial-info">
           <div class="testimonial-name">${t.name}</div>
           <div class="testimonial-platform" style="color:${platformColors[t.platform]}">
@@ -998,10 +980,8 @@ function loadMoreReviews() {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
     card.innerHTML = `
-      <div class="testimonial-image-container">
-        <img src="./images/testimonials/${testimonialImages[t.img]}" alt="${t.name} wearing red cashmere sweater" class="testimonial-image" loading="lazy">
-      </div>
       <div class="testimonial-header">
+        <img src="./images/testimonials/${testimonialImages[t.img]}" alt="${t.name}" class="testimonial-avatar" loading="lazy">
         <div class="testimonial-info">
           <div class="testimonial-name">${t.name}</div>
           <div class="testimonial-platform" style="color:${platformColors[t.platform]}">

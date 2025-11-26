@@ -1,0 +1,252 @@
+{
+  "timestamp": "2025-11-26T21:44:12.949Z",
+  "url": "https://redcashmere.netlify.app",
+  "summary": {
+    "total": 15,
+    "passed": 10,
+    "failed": 3,
+    "warnings": 2,
+    "passRate": "66.67%"
+  },
+  "tests": [
+    {
+      "name": "Page loads successfully (HTTP 200)",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:44:19.089Z",
+      "statusCode": 200
+    },
+    {
+      "name": "Title contains \"Cashmere\"",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:44:59.477Z",
+      "title": "Red Cashmere Sweater - Pure Luxury"
+    },
+    {
+      "name": "Hero image loads (not broken)",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:44:59.508Z"
+    },
+    {
+      "name": "CTA buttons visible and clickable",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:44:59.525Z",
+      "buttons": [
+        {
+          "text": "ADD TO CART - $59\n          Ships Today - Only 32 Left in Stock!",
+          "visible": true,
+          "selector": "button:has-text(\"ADD TO CART\")"
+        },
+        {
+          "text": "ADD TO CART - $59\n    Only 32 Left - Ships Today!",
+          "visible": true,
+          "selector": "button:has-text(\"ADD TO CART\")"
+        },
+        {
+          "text": "SAVE 68% - PRE-ORDER $19\n          Ships in 2-3 weeks (Save $40 - Worth the Wait!)",
+          "visible": true,
+          "selector": "button:has-text(\"PRE-ORDER\")"
+        },
+        {
+          "text": "ADD TO CART - $59\n          Ships Today - Only 32 Left in Stock!",
+          "visible": true,
+          "selector": "[class*=\"cta\"]"
+        },
+        {
+          "text": "SAVE 68% - PRE-ORDER $19\n          Ships in 2-3 weeks (Save $40 - Worth the Wait!)",
+          "visible": true,
+          "selector": "[class*=\"cta\"]"
+        },
+        {
+          "text": "ADD TO CART - $59\n    Only 32 Left - Ships Today!",
+          "visible": true,
+          "selector": "[class*=\"cta\"]"
+        },
+        {
+          "text": "ADD TO CART - $59\n    Only 32 Left - Ships Today!",
+          "visible": true,
+          "selector": "[class*=\"cta\"]"
+        }
+      ]
+    },
+    {
+      "name": "No horizontal scrolling at 390px viewport",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:44:59.527Z"
+    },
+    {
+      "name": "All elements fit within viewport",
+      "status": "WARN",
+      "timestamp": "2025-11-26T21:44:59.528Z",
+      "warning": "1 elements extend beyond viewport",
+      "outsideCount": 1,
+      "outsideElements": [
+        {
+          "tag": "IMG",
+          "class": "",
+          "right": 460.390625
+        }
+      ]
+    },
+    {
+      "name": "Touch targets are 44px minimum",
+      "status": "WARN",
+      "timestamp": "2025-11-26T21:44:59.529Z",
+      "warning": "7 touch targets smaller than 44px",
+      "smallTargets": [
+        {
+          "tag": "A",
+          "class": "",
+          "width": 350,
+          "height": 22.390625,
+          "text": "Contact Us"
+        },
+        {
+          "tag": "A",
+          "class": "",
+          "width": 350,
+          "height": 22.390625,
+          "text": "Returns & Exchanges"
+        },
+        {
+          "tag": "A",
+          "class": "",
+          "width": 350,
+          "height": 22.390625,
+          "text": "Shipping Information"
+        },
+        {
+          "tag": "A",
+          "class": "",
+          "width": 350,
+          "height": 22.390625,
+          "text": "Privacy Policy"
+        },
+        {
+          "tag": "A",
+          "class": "",
+          "width": 350,
+          "height": 22.390625,
+          "text": "Terms of Service"
+        },
+        {
+          "tag": "A",
+          "class": "",
+          "width": 350,
+          "height": 22.390625,
+          "text": "Cookie Settings"
+        },
+        {
+          "tag": "A",
+          "class": "",
+          "width": 316.53125,
+          "height": 39.390625,
+          "text": "Learn more in our Privacy Poli"
+        }
+      ]
+    },
+    {
+      "name": "Click $59 \"ADD TO CART\" button",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:45:01.995Z",
+      "action": "Popup appeared",
+      "urlAfter": "https://redcashmere.netlify.app/",
+      "popupVisible": true
+    },
+    {
+      "name": "PRE-ORDER checkout flow",
+      "status": "FAIL",
+      "timestamp": "2025-11-26T21:45:34.251Z",
+      "error": "locator.screenshot: Timeout 29997.696999999993ms exceeded.\nCall log:\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    2 × waiting for element to be stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying scroll into view action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying scroll into view action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying scroll into view action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "Check all images load (naturalWidth > 0)",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:45:34.311Z",
+      "totalImages": 16,
+      "loadedImages": 16
+    },
+    {
+      "name": "No broken images",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:45:34.311Z",
+      "brokenCount": 0
+    },
+    {
+      "name": "Product images display correctly",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:45:34.314Z",
+      "count": 6
+    },
+    {
+      "name": "Testimonial images display correctly",
+      "status": "PASS",
+      "timestamp": "2025-11-26T21:45:34.317Z",
+      "count": 10
+    },
+    {
+      "name": "Pool server health check - pools have wallets",
+      "status": "FAIL",
+      "timestamp": "2025-11-26T21:45:34.563Z",
+      "error": "Failed to fetch"
+    },
+    {
+      "name": "CORS test - buy-now endpoint accessible from browser",
+      "status": "FAIL",
+      "timestamp": "2025-11-26T21:45:34.773Z",
+      "error": "Failed to fetch"
+    }
+  ],
+  "screenshots": [
+    {
+      "filename": "fullpage-desktop-1920x1080.png",
+      "description": "Full page desktop view (1920x1080)",
+      "timestamp": "2025-11-26T21:44:21.618Z"
+    },
+    {
+      "filename": "hero-section-desktop.png",
+      "description": "Hero section desktop (top 800px)",
+      "timestamp": "2025-11-26T21:44:51.781Z"
+    },
+    {
+      "filename": "fullpage-mobile-390x844.png",
+      "description": "Full page mobile view (390x844 iPhone)",
+      "timestamp": "2025-11-26T21:44:59.475Z"
+    },
+    {
+      "filename": "before-add-to-cart.png",
+      "description": "Before clicking ADD TO CART",
+      "timestamp": "2025-11-26T21:44:59.711Z"
+    },
+    {
+      "filename": "after-add-to-cart.png",
+      "description": "After clicking ADD TO CART",
+      "timestamp": "2025-11-26T21:45:01.993Z"
+    },
+    {
+      "filename": "before-pre-order.png",
+      "description": "Before clicking PRE-ORDER",
+      "timestamp": "2025-11-26T21:45:02.108Z"
+    },
+    {
+      "filename": "after-pre-order.png",
+      "description": "After clicking PRE-ORDER",
+      "timestamp": "2025-11-26T21:45:04.239Z"
+    }
+  ],
+  "errors": [
+    {
+      "context": "PRE-ORDER flow",
+      "error": "locator.screenshot: Timeout 29997.696999999993ms exceeded.\nCall log:\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    2 × waiting for element to be stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying scroll into view action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying scroll into view action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying scroll into view action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    }
+  ],
+  "browser": {
+    "name": "Chromium",
+    "version": "Latest Playwright",
+    "headless": true
+  },
+  "environment": {
+    "node": "v22.16.0",
+    "playwright": "1.55.1",
+    "platform": "darwin"
+  }
+}
