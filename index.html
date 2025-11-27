@@ -448,31 +448,23 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 
 <!-- Main Content -->
 <div class="main-content" id="mainContent">
-  <div class="announcement">FREE SHIPPING & RETURNS - 100% PURE CASHMERE - GOOD CASHMERE STANDARD CERTIFIED</div>
-
-  <!-- Worn by Your Favorites Section -->
-  <div class="worn-by-favorites-section" style="padding:60px 20px;background:#fff;border-bottom:2px solid #f0f0f0">
-    <div style="max-width:1200px;margin:0 auto">
-      <h2 style="text-align:center;font-size:clamp(28px,5vw,36px);font-weight:800;margin-bottom:16px;color:#1a1a1a;letter-spacing:-0.02em">Worn by Your Favorites</h2>
-      <p style="text-align:center;color:#666;font-size:17px;margin-bottom:50px;max-width:600px;margin-left:auto;margin-right:auto">Join the style icons who trust our luxury cashmere</p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px">
-        <div style="text-align:center;padding:20px">
-          <img src="./images/worn-by-favorites/alix-earle.webp" alt="Alix Earle wearing red cashmere sweater" style="width:200px;height:200px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:4px solid #8B2942;box-shadow:0 8px 24px rgba(139,41,66,0.2)" loading="lazy">
-          <h3 style="font-size:20px;font-weight:700;margin-bottom:8px;color:#1a1a1a">Alix Earle</h3>
-          <p style="color:#666;font-size:15px;line-height:1.6;font-style:italic">"This cashmere sweater is absolutely divine. The quality is incredible and the red color is perfect for the season!"</p>
+  <!-- Worn by Your Favorites - Horizontal Top Bar -->
+  <div style="background:linear-gradient(135deg,#8B2942 0%,#6d1f33 100%);padding:12px 20px;color:#fff">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap">
+      <span style="font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px;opacity:0.9">WORN BY YOUR FAVORITES</span>
+      <span style="opacity:0.5;margin:0 8px">|</span>
+      <div style="display:flex;align-items:center;gap:20px">
+        <div style="display:flex;align-items:center;gap:8px">
+          <img src="./images/worn-by-favorites/alix-earle.webp" alt="Alix Earle" style="width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.5)" loading="eager">
+          <span style="font-weight:600;font-size:13px">Alix Earle</span>
         </div>
-
-        <div style="text-align:center;padding:20px">
-          <img src="./images/worn-by-favorites/monet-mcmichael.webp" alt="Monet McMichael wearing red cashmere sweater" style="width:200px;height:200px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:4px solid #8B2942;box-shadow:0 8px 24px rgba(139,41,66,0.2)" loading="lazy">
-          <h3 style="font-size:20px;font-weight:700;margin-bottom:8px;color:#1a1a1a">Monet McMichael</h3>
-          <p style="color:#666;font-size:15px;line-height:1.6;font-style:italic">"Luxury cashmere that doesn't break the bank? Sign me up! This is my new go-to sweater."</p>
+        <div style="display:flex;align-items:center;gap:8px">
+          <img src="./images/worn-by-favorites/monet-mcmichael.webp" alt="Monet McMichael" style="width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.5)" loading="eager">
+          <span style="font-weight:600;font-size:13px">Monet McMichael</span>
         </div>
-
-        <div style="text-align:center;padding:20px">
-          <img src="./images/worn-by-favorites/alex-cooper.webp" alt="Alex Cooper wearing red cashmere sweater" style="width:200px;height:200px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:4px solid #8B2942;box-shadow:0 8px 24px rgba(139,41,66,0.2)" loading="lazy">
-          <h3 style="font-size:20px;font-weight:700;margin-bottom:8px;color:#1a1a1a">Alex Cooper</h3>
-          <p style="color:#666;font-size:15px;line-height:1.6;font-style:italic">"The softness is unreal! I've gotten so many compliments. Worth every penny."</p>
+        <div style="display:flex;align-items:center;gap:8px">
+          <img src="./images/worn-by-favorites/alex-cooper.webp" alt="Alex Cooper" style="width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.5)" loading="eager">
+          <span style="font-weight:600;font-size:13px">Alex Cooper</span>
         </div>
       </div>
     </div>
@@ -539,6 +531,17 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
           <span><strong>847</strong> customers added this today</span>
         </div>
 
+        <!-- Size Selector -->
+        <div style="margin:20px 0">
+          <div style="font-weight:600;font-size:14px;margin-bottom:12px;color:#1a1a1a">Select Size:</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="size-btn" onclick="selectSize(this, 'XS')">XS</button>
+            <button class="size-btn" onclick="selectSize(this, 'S')">S</button>
+            <button class="size-btn selected" onclick="selectSize(this, 'M')">M</button>
+            <button class="size-btn" onclick="selectSize(this, 'L')">L</button>
+            <button class="size-btn" disabled onclick="selectSize(this, 'XL')">XL<span style="display:block;font-size:10px;color:#dc3545">Sold Out</span></button>
+          </div>
+        </div>
 
         <button class="cta-btn cta-primary fade-in visible" id="primaryCTA" onclick="handleAddToCart('primary')">
           <span style="font-size:22px">ADD TO CART - $59</span>
@@ -1017,20 +1020,6 @@ function loadRemainingContent() {
   const lazyContent = document.getElementById('lazyContent');
 
   lazyContent.innerHTML = `
-    <!-- Size Selector -->
-    <div class="fade-in" style="padding:40px 20px;border-top:1px solid #f0f0f0;max-width:1200px;margin:0 auto">
-      <h3 style="margin-bottom:20px;font-weight:600;font-size:18px">Select Your Size:</h3>
-      <div class="size-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:12px;margin-bottom:30px">
-        ${[{s:'XS',a:true},{s:'S',a:true},{s:'M',a:true},{s:'L',a:true},{s:'XL',a:false}].map(size =>
-          `<button class="size-btn" data-size="${size.s}" ${!size.a ? 'disabled' : ''} onclick="selectSize(this, '${size.s}')">${size.s}${!size.a ? '<span style="display:block;font-size:10px;color:#dc3545;margin-top:2px">Sold Out</span>' : ''}</button>`
-        ).join('')}
-      </div>
-      <div style="background:#f8f9fa;border-left:3px solid #8B2942;padding:20px;border-radius:8px">
-        <strong style="color:#8B2942">Free Returns + Fast Shipping</strong><br>
-        <span style="color:#666;font-size:14px">Not satisfied? Return within 30 days for a full refund.</span>
-      </div>
-    </div>
-
     <!-- Product Details -->
     <div class="fade-in" style="padding:60px 20px;background:#f8f9fa;max-width:1200px;margin:0 auto">
       <h2 style="text-align:center;font-size:28px;font-weight:700;margin-bottom:40px">The Details</h2>
