@@ -1020,58 +1020,6 @@ function loadRemainingContent() {
   const lazyContent = document.getElementById('lazyContent');
 
   lazyContent.innerHTML = `
-    <!-- Product Details -->
-    <div class="fade-in" style="padding:60px 20px;background:#f8f9fa;max-width:1200px;margin:0 auto">
-      <h2 style="text-align:center;font-size:28px;font-weight:700;margin-bottom:40px">The Details</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px">
-        <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.04)">
-          <h3 style="font-size:18px;font-weight:600;margin-bottom:16px">Fit & Style</h3>
-          <ul style="color:#555;font-size:15px;line-height:1.8;list-style:none;padding:0">
-            <li>Classic crew neck design</li>
-            <li>Ribbed trims at cuffs and hem</li>
-            <li>Relaxed, timeless fit</li>
-            <li>Elegant silhouette</li>
-          </ul>
-        </div>
-        <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.04)">
-          <h3 style="font-size:18px;font-weight:600;margin-bottom:16px">Fabric & Care</h3>
-          <ul style="color:#555;font-size:15px;line-height:1.8;list-style:none;padding:0">
-            <li>100% pure cashmere</li>
-            <li>Good Cashmere Standard certified</li>
-            <li>Rich red color</li>
-            <li>Hand wash or dry clean only</li>
-          </ul>
-        </div>
-        <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.04)">
-          <h3 style="font-size:18px;font-weight:600;margin-bottom:16px">Styling Tips</h3>
-          <ul style="color:#555;font-size:15px;line-height:1.8;list-style:none;padding:0">
-            <li>Layer over white shirt for classic look</li>
-            <li>Pair with jeans for casual elegance</li>
-            <li>Match with tailored trousers for work</li>
-            <li>Complete with matching cardigan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Why Choose Section -->
-    <div class="fade-in" style="padding:60px 20px;max-width:1200px;margin:0 auto">
-      <h2 style="text-align:center;font-size:28px;font-weight:700;margin-bottom:40px">The Red Cashmere Difference</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px">
-        ${[
-          { icon: '', title: 'Ethically Sourced', desc: 'Good Cashmere Standard certified for responsible luxury' },
-          { icon: '', title: 'Exceptionally Soft', desc: 'Premium cashmere fibers for unmatched comfort' },
-          { icon: '', title: 'Timeless Design', desc: 'Classic crew neck silhouette that transcends seasons' }
-        ].map(f => `
-          <div style="text-align:center;padding:30px">
-            <div style="font-size:48px;margin-bottom:20px">${f.icon}</div>
-            <h3 style="margin-bottom:15px;font-weight:600">${f.title}</h3>
-            <p style="color:#666;font-size:14px;line-height:1.6">${f.desc}</p>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-
     <!-- Featured Review Carousel Section -->
     <div class="fade-in" style="padding:60px 20px;background:#fff;border-bottom:2px solid #f0f0f0">
       <div style="max-width:1200px;margin:0 auto">
