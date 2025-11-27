@@ -52,8 +52,12 @@
 <meta name="color-scheme" content="light">
 
 <!-- Critical Resource Hints -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="//analytics.google.com">
+
+<!-- Google Fonts - Luxury Typography -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Preload Critical Hero Image -->
 <link rel="preload" as="image" href="./images/product/Gemini_Generated_Image_oslxkboslxkboslx.png" type="image/png" fetchpriority="high">
@@ -61,8 +65,9 @@
 <!-- Critical CSS - Ultra-Minimal -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;color:#1a1a1a;line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+html,body{font-family:'Montserrat',sans-serif;color:#1a1a1a;line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
 img{max-width:100%;height:auto}
+h1,h2,h3{font-family:'Cormorant Garamond',serif}
 
 /* Main Page Styles - No Quiz Version */
 .main-content{display:block}
@@ -75,15 +80,20 @@ img{max-width:100%;height:auto}
 .product-info h1{font-size:clamp(32px,5vw,44px);font-weight:800;margin-bottom:12px;line-height:1.1;letter-spacing:-0.03em;color:#1a1a1a}
 .tagline{color:#555;font-size:clamp(17px,3vw,19px);margin-bottom:24px;font-weight:400;line-height:1.5}
 .price-box{display:flex;align-items:baseline;gap:15px;margin-bottom:32px;flex-wrap:wrap;padding:20px;background:linear-gradient(135deg,#fff5f7 0%,#ffe8ed 100%);border-radius:12px;border:2px solid #8B2942}
-.price{font-size:clamp(36px,7vw,48px);font-weight:900;color:#8B2942;letter-spacing:-0.03em}
+.price{font-family:'Montserrat',sans-serif;font-size:clamp(36px,7vw,48px);font-weight:700;color:#8B2942;letter-spacing:-0.03em}
 .old-price{font-size:clamp(22px,4vw,28px);color:#999;text-decoration:line-through;font-weight:600}
-.badge{background:#dc3545;color:#fff;padding:6px 16px;border-radius:24px;font-size:15px;font-weight:700;white-space:nowrap;box-shadow:0 2px 8px rgba(220,53,69,0.3);animation:pulse 2s infinite}
-.cta-btn{width:100%;padding:22px 24px;font-size:20px;font-weight:800;border-radius:12px;border:none;cursor:pointer;margin-bottom:16px;transition:all 0.2s cubic-bezier(0.4,0,0.2,1);transform:translateZ(0);will-change:transform;position:relative;overflow:hidden;text-transform:uppercase;letter-spacing:0.5px;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.cta-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:left 0.5s;z-index:1}
+.badge{background:#dc3545;color:#fff;padding:6px 16px;border-radius:24px;font-size:15px;font-weight:700;white-space:nowrap;box-shadow:0 2px 8px rgba(220,53,69,0.3);animation:pulse-badge 2s infinite}
+.cta-btn{font-family:'Montserrat',sans-serif;width:100%;padding:22px 24px;font-size:20px;font-weight:700;border-radius:12px;border:none;cursor:pointer;margin-bottom:16px;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);transform:translateZ(0);will-change:transform;position:relative;overflow:hidden;text-transform:uppercase;letter-spacing:0.5px;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.cta-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:left 0.6s ease;z-index:1;animation:shimmer 3s infinite}
 .cta-btn:hover::before{left:100%}
-.cta-primary{background:linear-gradient(135deg,#8B2942 0%,#a63955 100%);color:#fff;box-shadow:0 4px 16px rgba(139,41,66,0.4);border:3px solid #6d1f33}
-.cta-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 24px rgba(139,41,66,0.5)}
-.cta-primary:active{transform:translateY(0) scale(0.98)}
+.cta-primary{background:linear-gradient(135deg,#8B2942 0%,#a63955 50%,#c24d6a 100%),repeating-linear-gradient(45deg,transparent,transparent 2px,rgba(255,255,255,0.03) 2px,rgba(255,255,255,0.03) 4px);background-blend-mode:normal;color:#fff;box-shadow:0 4px 16px rgba(139,41,66,0.4),inset 0 1px 0 rgba(255,255,255,0.2);border:3px solid #6d1f33;position:relative}
+.cta-primary::after{content:'';position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.3),transparent);transition:width 0.5s,height 0.5s,top 0.5s,left 0.5s;z-index:0}
+.cta-primary:hover{transform:translateY(-3px) scale(1.01);box-shadow:0 12px 32px rgba(139,41,66,0.6),0 0 40px rgba(139,41,66,0.3),inset 0 1px 0 rgba(255,255,255,0.3)}
+.cta-primary:hover::after{width:300px;height:300px;top:calc(50% - 150px);left:calc(50% - 150px)}
+.cta-primary:active{transform:translateY(0) scale(0.98);box-shadow:0 2px 8px rgba(139,41,66,0.4),inset 0 1px 0 rgba(255,255,255,0.1)}
+.cta-secondary{background:#fff;color:#8B2942;border:3px solid #8B2942;transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}
+.cta-secondary:hover{background:linear-gradient(135deg,#fce4e9 0%,#f8d0d8 100%);transform:translateY(-2px);box-shadow:0 6px 20px rgba(139,41,66,0.25)}
+.cta-secondary:active{transform:translateY(0) scale(0.98)}
 .btn-subtitle{font-size:13px;font-weight:600;opacity:1;margin-top:6px;position:relative;z-index:2;text-transform:none;letter-spacing:0}
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
@@ -115,9 +125,9 @@ img{max-width:100%;height:auto}
 
 
 /* Size Selector */
-.size-btn{padding:14px 12px;border:2px solid #e0e0e0;background:#fff;border-radius:8px;cursor:pointer;font-weight:600;transition:all 0.2s;font-size:14px}
-.size-btn:not(:disabled):hover{border-color:#8B2942;transform:scale(1.05)}
-.size-btn.selected{background:#8B2942;color:#fff;border-color:#8B2942}
+.size-btn{font-family:'Montserrat',sans-serif;padding:14px 12px;border:2px solid #e0e0e0;background:#fff;border-radius:8px;cursor:pointer;font-weight:600;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);font-size:14px}
+.size-btn:not(:disabled):hover{border-color:#8B2942;transform:scale(1.05);box-shadow:0 4px 12px rgba(139,41,66,0.15)}
+.size-btn.selected{background:#8B2942;color:#fff;border-color:#8B2942;box-shadow:0 4px 12px rgba(139,41,66,0.3)}
 .size-btn:disabled{opacity:0.4;cursor:not-allowed}
 
 /* Mobile Responsive */
@@ -161,6 +171,8 @@ img{max-width:100%;height:auto}
 
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(139,41,66,0.4)}50%{box-shadow:0 0 0 10px rgba(139,41,66,0)}}
+@keyframes pulse-badge{0%,100%{box-shadow:0 2px 8px rgba(220,53,69,0.3);transform:scale(1)}50%{box-shadow:0 4px 16px rgba(220,53,69,0.5);transform:scale(1.05)}}
+@keyframes shimmer{0%{left:-100%}50%{left:100%}100%{left:100%}}
 
 /* GDPR Cookie Consent Banner */
 .cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -4px 20px rgba(0,0,0,0.15);padding:20px;z-index:10001;border-top:3px solid #8B2942;display:none;animation:slideUp 0.4s ease}
@@ -174,6 +186,19 @@ img{max-width:100%;height:auto}
 .cookie-btn.accept:hover{background:#6d1f33;transform:translateY(-2px)}
 .cookie-btn.decline{background:#f0f0f0;color:#333}
 .cookie-btn.decline:hover{background:#e0e0e0}
+
+/* Custom SVG Icon Styles */
+.feature-icon{width:64px;height:64px;margin:0 auto 20px;position:relative}
+.feature-icon-bg{fill:#8B2942;opacity:0.1}
+.feature-icon-stroke{fill:none;stroke:#8B2942;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.trust-badge{display:flex;align-items:center;gap:10px;padding:12px 16px;background:#fff;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.06);transition:all 0.3s ease}
+.trust-badge:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(139,41,66,0.15)}
+.trust-badge-icon{width:28px;height:28px;flex-shrink:0}
+.trust-badge-text{font-size:13px;font-weight:600;color:#333;line-height:1.3}
+.social-proof-badge{background:linear-gradient(135deg,#fff5f7 0%,#ffe8ed 100%);border:2px solid #8B2942;border-radius:12px;padding:20px 30px;text-align:center;margin:30px 0}
+.social-proof-icon{width:40px;height:40px;margin:0 auto 12px}
+.certification-badge{display:inline-flex;align-items:center;gap:8px;background:#f8fff8;border:2px solid #28a745;border-radius:8px;padding:10px 16px;font-size:13px;font-weight:600;color:#28a745}
+.certification-icon{width:20px;height:20px}
 
 /* Footer Styles */
 .site-footer{background:#1a1a1a;color:#fff;padding:40px 20px 20px;margin-top:0}
@@ -189,7 +214,30 @@ img{max-width:100%;height:auto}
 .cookie-buttons{width:100%}
 .cookie-btn{flex:1}
 .footer-content{grid-template-columns:1fr}
+.purchase-toast{left:10px;bottom:80px;max-width:calc(100vw - 20px);padding:12px 16px}
+.countdown-timer{flex-direction:column;gap:8px;padding:10px 16px}
+.timer-digits{gap:6px}
+.timer-box{min-width:40px;padding:6px 10px;font-size:18px}
 }
+
+/* Urgency & Scarcity Elements */
+.live-viewers{display:flex;align-items:center;gap:8px;background:#fff5f7;padding:10px 16px;border-radius:8px;margin-bottom:16px;border:1px solid rgba(139,41,66,0.15)}
+.pulse-dot{width:10px;height:10px;background:#28a745;border-radius:50%;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(40,167,69,0.7)}50%{box-shadow:0 0 0 8px rgba(40,167,69,0)}}
+.stock-warning{background:#fff3cd;border-left:4px solid #ff6b35;padding:12px 16px;border-radius:8px;margin-bottom:16px;color:#856404;font-weight:700;font-size:15px}
+.countdown-timer{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#dc3545 0%,#c82333 100%);color:#fff;padding:12px 20px;border-radius:10px;margin-bottom:20px;box-shadow:0 4px 12px rgba(220,53,69,0.3);justify-content:center}
+.timer-label{font-weight:700;font-size:14px;letter-spacing:0.5px}
+.timer-digits{display:flex;gap:8px}
+.timer-box{background:rgba(0,0,0,0.2);padding:8px 12px;border-radius:6px;min-width:45px;text-align:center;font-family:monospace;font-size:20px;font-weight:700}
+.timer-separator{font-size:20px;font-weight:700;opacity:0.8}
+.purchase-toast{position:fixed;bottom:100px;left:20px;background:#fff;padding:16px 20px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.2);z-index:9999;display:flex;align-items:center;gap:12px;max-width:340px;border-left:4px solid #28a745;opacity:0;transform:translateX(-400px);transition:all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55)}
+.purchase-toast.show{opacity:1;transform:translateX(0)}
+.purchase-toast-icon{background:#28a745;color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.purchase-toast-text{flex:1}
+.purchase-toast-name{font-weight:700;font-size:14px;color:#1a1a1a;margin-bottom:2px}
+.purchase-toast-location{font-size:12px;color:#666}
+.purchase-toast-time{font-size:11px;color:#999;margin-top:4px}
+.added-today-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#28a745 0%,#20c997 100%);color:#fff;padding:10px 18px;border-radius:24px;font-weight:700;font-size:14px;box-shadow:0 4px 12px rgba(40,167,69,0.3);margin-bottom:20px}
 </style>
 
 <!-- Prefetch Additional Images -->
@@ -440,15 +488,55 @@ img{max-width:100%;height:auto}
       <div class="product-info">
         <h1 class="fade-in visible">Luxurious Red Cashmere Sweater</h1>
         <p class="tagline fade-in visible">Crafted from 100% pure cashmere - effortless elegance for the modern wardrobe</p>
+        <!-- Live Viewer Count -->
+        <div class="live-viewers">
+          <span class="pulse-dot"></span>
+          <span style="font-weight:600;font-size:14px;color:#333">
+            <span id="viewerCount">32</span> people viewing this right now
+          </span>
+        </div>
+
+
+        <!-- Certification Badge -->
+        <div style="margin:16px 0">
+          <div class="certification-badge">
+            <svg class="certification-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="#28a745"/>
+              <path d="M8 12l3 3 5-6" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Good Cashmere Standard Certified</span>
+          </div>
+        </div>
 
         <div class="price-box fade-in visible">
           <span class="price">$59</span>
           <span class="old-price">$189</span>
           <span class="badge">69% OFF</span>
         </div>
-        <div style="background:#fff5f7;border-left:4px solid #dc3545;padding:12px 16px;border-radius:8px;margin-bottom:20px">
-          <div style="color:#dc3545;font-size:16px;font-weight:700;margin-bottom:4px">523 sweaters sold this week</div>
-          <div style="color:#666;font-size:13px">Only 32 left in stock - selling fast!</div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-timer">
+          <span class="timer-label">SALE ENDS IN:</span>
+          <div class="timer-digits">
+            <div class="timer-box" id="hours">14</div>
+            <span class="timer-separator">:</span>
+            <div class="timer-box" id="minutes">59</div>
+            <span class="timer-separator">:</span>
+            <div class="timer-box" id="seconds">32</div>
+          </div>
+        </div>
+
+        <!-- Stock Counter -->
+        <div class="stock-warning">
+          Only <span id="stockCount">23</span> left in stock!
+        </div>
+
+        <!-- Added Today Badge -->
+        <div class="added-today-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 00-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 12 7.4l3.38 4.6L17 10.83 14.92 8H20v6z"/>
+          </svg>
+          <span><strong>847</strong> customers added this today</span>
         </div>
 
 
@@ -461,6 +549,42 @@ img{max-width:100%;height:auto}
           <span style="font-size:20px">PRE-ORDER - $19</span>
           <div class="btn-subtitle">Ships in 2-3 Weeks - Save $40</div>
         </button>
+
+        <!-- Trust Badge Row -->
+        <div style="background:#f8f9fa;border-radius:12px;padding:20px;margin:20px 0">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px">
+            <div class="trust-badge">
+              <svg class="trust-badge-icon" viewBox="0 0 24 24">
+                <path d="M3 7l6-4 6 4v5c0 3.9-2.7 7.5-6 8.5C5.7 19.5 3 15.9 3 12V7z" fill="none" stroke="#8B2942" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 11l-3 3M9 11l3-3" stroke="#8B2942" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M15 7h4v8l-4 2" stroke="#8B2942" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="trust-badge-text">Free<br>Shipping</div>
+            </div>
+            <div class="trust-badge">
+              <svg class="trust-badge-icon" viewBox="0 0 24 24">
+                <path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#8B2942" stroke-width="1.5"/>
+                <path d="M12 6v6l4 2" stroke="#8B2942" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 18a1 1 0 100-2 1 1 0 000 2zM8 18a1 1 0 100-2 1 1 0 000 2z" fill="#8B2942"/>
+              </svg>
+              <div class="trust-badge-text">30-Day<br>Returns</div>
+            </div>
+            <div class="trust-badge">
+              <svg class="trust-badge-icon" viewBox="0 0 24 24">
+                <path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z" fill="none" stroke="#8B2942" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="#8B2942" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="trust-badge-text">Secure<br>Checkout</div>
+            </div>
+            <div class="trust-badge">
+              <svg class="trust-badge-icon" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="#8B2942" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 9v6M9 12h6" stroke="#8B2942" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <div class="trust-badge-text">4.9/5<br>Rating</div>
+            </div>
+          </div>
+        </div>
 
         <!-- Trust Badges -->
         <div style="background:#f8f9fa;border-radius:12px;padding:20px;margin-top:20px">
@@ -492,6 +616,68 @@ img{max-width:100%;height:auto}
   </div>
 
   <!-- Lazy Content Container -->
+
+  <!-- Why Choose Red Cashmere Section -->
+  <div class="fade-in" style="padding:80px 20px;background:#fff;border-top:2px solid #f0f0f0;border-bottom:2px solid #f0f0f0">
+    <div style="max-width:1200px;margin:0 auto">
+      <h2 style="text-align:center;font-size:clamp(28px,5vw,36px);font-weight:800;margin-bottom:20px;color:#1a1a1a;letter-spacing:-0.02em">Why Choose Red Cashmere</h2>
+      <p style="text-align:center;color:#666;font-size:17px;margin-bottom:60px;max-width:700px;margin-left:auto;margin-right:auto">Experience the difference of true luxury cashmere with our commitment to quality, craftsmanship, and timeless elegance</p>
+
+      <!-- Social Proof Badge -->
+      <div class="social-proof-badge" style="max-width:500px;margin:0 auto 60px">
+        <svg class="social-proof-icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="#8B2942" stroke-width="1.5"/>
+          <path d="M16 11c0-2.2-1.8-4-4-4s-4 1.8-4 4M12 14h.01M8 14h.01M16 14h.01" stroke="#8B2942" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 2c-.6 0-1.2.1-1.8.2M22 12c0 .6-.1 1.2-.2 1.8M12 22c.6 0 1.2-.1 1.8-.2M2 12c0-.6.1-1.2.2-1.8" stroke="#8B2942" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size:28px;font-weight:800;color:#8B2942;margin-bottom:4px">Join 10,000+ Happy Customers</div>
+        <div style="color:#666;font-size:15px">Trusted by luxury cashmere lovers worldwide</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:50px">
+        <!-- Feature 1: Pure Cashmere -->
+        <div style="text-align:center;padding:30px 20px">
+          <svg class="feature-icon" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="28" class="feature-icon-bg"/>
+            <path d="M32 16c-4 0-7 2-7 5 0 2 1 3.5 3 4.5M32 16c4 0 7 2 7 5 0 2-1 3.5-3 4.5M32 16v9.5" class="feature-icon-stroke"/>
+            <circle cx="32" cy="28" r="6" class="feature-icon-stroke"/>
+            <path d="M22 32c-3 2-5 5-5 8.5 0 4.5 4 8 9 8.5M42 32c3 2 5 5 5 8.5 0 4.5-4 8-9 8.5" class="feature-icon-stroke"/>
+            <path d="M28 36c-2 1.5-3 3.5-3 6 0 3 2.5 5.5 5.5 6M36 36c2 1.5 3 3.5 3 6 0 3-2.5 5.5-5.5 6" class="feature-icon-stroke"/>
+            <ellipse cx="32" cy="44" rx="8" ry="4" class="feature-icon-stroke"/>
+          </svg>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#1a1a1a">100% Pure Cashmere</h3>
+          <p style="color:#666;font-size:15px;line-height:1.7">Grade A Mongolian cashmere, ethically sourced and certified by the Good Cashmere Standard for unparalleled softness</p>
+        </div>
+
+        <!-- Feature 2: Expert Craftsmanship -->
+        <div style="text-align:center;padding:30px 20px">
+          <svg class="feature-icon" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="28" class="feature-icon-bg"/>
+            <path d="M20 28h24M20 32h24M20 36h24" class="feature-icon-stroke" stroke-width="1"/>
+            <path d="M28 18l-8 10h24l-8-10" class="feature-icon-stroke"/>
+            <path d="M32 18v-6M32 12l-2 2M32 12l2 2" class="feature-icon-stroke"/>
+            <path d="M24 40v6c0 2 1.5 3.5 4 4h8c2.5-.5 4-2 4-4v-6" class="feature-icon-stroke"/>
+            <path d="M28 44h8M28 47h8" class="feature-icon-stroke" stroke-width="1"/>
+          </svg>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#1a1a1a">Expert Craftsmanship</h3>
+          <p style="color:#666;font-size:15px;line-height:1.7">72 hours of meticulous hand-finishing by master artisans ensures every stitch is perfect</p>
+        </div>
+
+        <!-- Feature 3: Timeless Elegance -->
+        <div style="text-align:center;padding:30px 20px">
+          <svg class="feature-icon" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="28" class="feature-icon-bg"/>
+            <path d="M32 14l4 12h12l-10 8 4 12-10-7-10 7 4-12-10-8h12z" class="feature-icon-stroke"/>
+            <circle cx="32" cy="32" r="4" class="feature-icon-stroke"/>
+            <path d="M32 20v-6M32 48v-6M20 32h-6M50 32h-6" class="feature-icon-stroke" stroke-width="1.2"/>
+            <path d="M24 24l-4-4M40 40l4 4M40 24l4-4M24 40l-4 4" class="feature-icon-stroke" stroke-width="1.2" opacity="0.6"/>
+          </svg>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#1a1a1a">Timeless Elegance</h3>
+          <p style="color:#666;font-size:15px;line-height:1.7">Classic design that never goes out of style - a versatile wardrobe essential for every season</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="lazyContent"></div>
 </div>
 
@@ -897,10 +1083,34 @@ function loadRemainingContent() {
       </div>
     </div>
 
+    <!-- Featured Review Carousel Section -->
+    <div class="fade-in" style="padding:60px 20px;background:#fff;border-bottom:2px solid #f0f0f0">
+      <div style="max-width:1200px;margin:0 auto">
+        <h2 style="text-align:center;font-size:36px;font-weight:800;margin-bottom:12px;color:#1a1a1a;letter-spacing:-0.02em">What Our Customers Are Saying</h2>
+        <p style="text-align:center;color:#666;font-size:17px;margin-bottom:50px">Real reviews from verified purchases</p>
+
+        <!-- Featured Review Carousel -->
+        <div style="max-width:800px;margin:0 auto;position:relative">
+          <div id="featuredCarousel" style="background:#fff;border-radius:16px;padding:50px 40px;box-shadow:0 10px 40px rgba(139,41,66,0.12);position:relative;overflow:hidden;min-height:320px">
+            <!-- Large decorative quote mark -->
+            <svg style="position:absolute;top:20px;left:30px;width:60px;height:60px;opacity:0.1;fill:#8B2942" viewBox="0 0 24 24">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+
+            <!-- Review content will be injected here by JavaScript -->
+            <div id="carouselContent"></div>
+          </div>
+
+          <!-- Dot Navigation -->
+          <div id="carouselDots" style="display:flex;justify-content:center;align-items:center;gap:10px;margin-top:30px"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Testimonials Section -->
     <div class="fade-in" style="padding:60px 20px;background:#f8f9fa">
       <div style="max-width:1200px;margin:0 auto">
-        <h2 style="text-align:center;font-size:32px;font-weight:800;margin-bottom:20px;color:#1a1a1a">Real Reviews from Real Customers</h2>
+        <h2 style="text-align:center;font-size:32px;font-weight:800;margin-bottom:20px;color:#1a1a1a">More Customer Reviews</h2>
 
         <!-- Rating Summary -->
         <div style="background:#fff;border-radius:16px;padding:30px;margin-bottom:40px;box-shadow:0 4px 16px rgba(0,0,0,0.08);border:2px solid #8B2942">
@@ -1095,12 +1305,171 @@ function handleCookieConsent(accepted) {
   }
 }
 
+// Featured Review Carousel - 5 Premium Reviews
+const featuredReviews = [
+  {
+    name: "Sarah K.",
+    platform: "tiktok",
+    platformColor: "#000000",
+    rating: 5,
+    text: "This sweater is everything! The cashmere is incredibly soft and luxurious. I've worn it non-stop since it arrived. The red color is absolutely stunning and I get compliments everywhere I go. Worth every single penny!",
+    helpful: 127,
+    verified: true
+  },
+  {
+    name: "Emma L.",
+    platform: "instagram",
+    platformColor: "#E4405F",
+    rating: 5,
+    text: "Finally found a cashmere that's worth every penny! The quality is outstanding - you can immediately tell this is premium material. It's soft, warm, and the fit is perfect. This is luxury that's actually affordable.",
+    helpful: 94,
+    verified: true
+  },
+  {
+    name: "Mia R.",
+    platform: "trustpilot",
+    platformColor: "#00b67a",
+    rating: 5,
+    text: "I was skeptical but this exceeded expectations in every way. The cashmere feels amazing against the skin, and the crew neck design is timeless. This will be a staple in my wardrobe for years to come.",
+    helpful: 156,
+    verified: true
+  },
+  {
+    name: "Olivia T.",
+    platform: "google",
+    platformColor: "#4285F4",
+    rating: 5,
+    text: "The quality is outstanding. Feels like designer cashmere but at a fraction of the price. The red color is rich and sophisticated. I'm absolutely in love with this sweater and have already recommended it to all my friends!",
+    helpful: 103,
+    verified: true
+  },
+  {
+    name: "Ava M.",
+    platform: "facebook",
+    platformColor: "#1877F2",
+    rating: 5,
+    text: "Best purchase I've made all year. So luxurious and comfortable! The fit is flattering and the cashmere is genuinely the softest I've ever felt. This is the kind of piece you'll treasure forever.",
+    helpful: 118,
+    verified: true
+  }
+];
+
+let currentCarouselIndex = 0;
+let carouselInterval = null;
+let isPaused = false;
+
+function renderCarouselReview(index) {
+  const review = featuredReviews[index];
+  const content = document.getElementById('carouselContent');
+  
+  if (!content) return;
+  
+  // Create star string
+  const stars = '\u2605'.repeat(review.rating);
+  
+  // Fade out
+  content.style.opacity = '0';
+  content.style.transition = 'opacity 0.3s ease';
+  
+  setTimeout(() => {
+    content.innerHTML = "<div style=\"text-align:center;position:relative;z-index:2\"><div style=\"color:#ffc107;font-size:32px;letter-spacing:4px;margin-bottom:20px\">" + stars + "</div><p style=\"font-size:20px;line-height:1.8;color:#333;margin-bottom:30px;font-weight:400;max-width:700px;margin-left:auto;margin-right:auto;font-style:italic\">\"" + review.text + "\"</p><div style=\"display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px\"><div style=\"font-size:18px;font-weight:700;color:#1a1a1a\">" + review.name + "</div><div style=\"display:flex;align-items:center;gap:6px;background:" + review.platformColor + ";color:#fff;padding:4px 12px;border-radius:16px;font-size:12px;font-weight:600\"><svg style=\"width:14px;height:14px;fill:#fff\" viewBox=\"0 0 24 24\"><path d=\"M9 12l2 2 4-4\" stroke=\"#fff\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/></svg><span>Verified Purchase</span></div></div><div style=\"color:" + review.platformColor + ";font-size:14px;font-weight:600;margin-bottom:20px;text-transform:capitalize\">via " + review.platform + "</div><div style=\"display:flex;align-items:center;justify-content:center;gap:8px;color:#666;font-size:14px\"><svg style=\"width:18px;height:18px;fill:#8B2942\" viewBox=\"0 0 24 24\"><path d=\"M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3\"/></svg><span style=\"font-weight:600\">" + review.helpful + " people found this helpful</span></div></div>";
+    
+    setTimeout(() => {
+      content.style.opacity = '1';
+    }, 50);
+  }, 300);
+}
+
+function renderCarouselDots() {
+  const dotsContainer = document.getElementById('carouselDots');
+  if (!dotsContainer) return;
+  
+  let dotsHTML = '';
+  for (let i = 0; i < featuredReviews.length; i++) {
+    const isActive = i === currentCarouselIndex;
+    const bg = isActive ? '#8B2942' : '#d0d0d0';
+    const scale = isActive ? 1.2 : 1;
+    dotsHTML += "<button onclick=\"goToCarouselReview(" + i + ")\" style=\"width:12px;height:12px;border-radius:50%;border:none;cursor:pointer;transition:all 0.3s ease;background:" + bg + ";transform:scale(" + scale + ")\" aria-label=\"Go to review " + (i + 1) + "\"></button>";
+  }
+  dotsContainer.innerHTML = dotsHTML;
+}
+
+function nextCarouselReview() {
+  currentCarouselIndex = (currentCarouselIndex + 1) % featuredReviews.length;
+  renderCarouselReview(currentCarouselIndex);
+  renderCarouselDots();
+}
+
+function prevCarouselReview() {
+  currentCarouselIndex = (currentCarouselIndex - 1 + featuredReviews.length) % featuredReviews.length;
+  renderCarouselReview(currentCarouselIndex);
+  renderCarouselDots();
+}
+
+function goToCarouselReview(index) {
+  currentCarouselIndex = index;
+  renderCarouselReview(currentCarouselIndex);
+  renderCarouselDots();
+  
+  if (carouselInterval) {
+    clearInterval(carouselInterval);
+    startCarouselAutoRotation();
+  }
+}
+
+function startCarouselAutoRotation() {
+  if (carouselInterval) {
+    clearInterval(carouselInterval);
+  }
+  
+  carouselInterval = setInterval(function() {
+    if (!isPaused) {
+      nextCarouselReview();
+    }
+  }, 5000);
+}
+
+function initCarousel() {
+  const carousel = document.getElementById('featuredCarousel');
+  if (!carousel) return;
+  
+  renderCarouselReview(0);
+  renderCarouselDots();
+  startCarouselAutoRotation();
+  
+  carousel.addEventListener('mouseenter', function() {
+    isPaused = true;
+  });
+  
+  carousel.addEventListener('mouseleave', function() {
+    isPaused = false;
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCarousel);
+} else {
+  initCarousel();
+}
+
+
 function showCookieSettings() {
   // Reset consent and show banner again
   localStorage.removeItem('cookieConsent');
   document.getElementById('cookieBanner').classList.add('show');
 }
 </script>
+
+
+<!-- Purchase Toast Notifications -->
+<div id="purchaseToast" class="purchase-toast">
+  <div class="purchase-toast-icon">✓</div>
+  <div class="purchase-toast-text">
+    <div class="purchase-toast-name"></div>
+    <div class="purchase-toast-location"></div>
+    <div class="purchase-toast-time"></div>
+  </div>
+</div>
 
 </body>
 </html>

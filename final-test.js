@@ -77,18 +77,22 @@ const { chromium } = require('playwright');
     failed++;
   }
 
-  // Test 6: Pool server
-  console.log('6. Pool Server Test...');
+  // Test 6: Checkout proxy function (verifies CORS bypass works)
+  console.log('6. Checkout Function Test...');
   try {
-    const poolData = await page.evaluate(async () => {
-      const res = await fetch('https://simpleswap-automation-1.onrender.com/health/pools');
-      return res.ok ? await res.json() : null;
+    const checkoutResult = await page.evaluate(async () => {
+      const res = await fetch('/.netlify/functions/buy-now', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ amountUSD: 59 })
+      });
+      return res.ok ? await res.json() : { error: 'Request failed' };
     });
-    if (poolData && poolData.status) {
-      console.log('   ✓ PASS - Pool status:', poolData.status);
+    if (checkoutResult && checkoutResult.success && checkoutResult.exchangeUrl) {
+      console.log('   ✓ PASS - Checkout working, got exchange URL');
       passed++;
     } else {
-      console.log('   ✗ FAIL - Pool unavailable');
+      console.log('   ✗ FAIL - Checkout error:', checkoutResult.error || 'No exchange URL');
       failed++;
     }
   } catch (e) {
