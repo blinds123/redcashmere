@@ -777,7 +777,7 @@ async function getExchangeFromPool(amountUSD) {
     if (btn) btn.innerHTML = 'Creating your order...<div class="btn-subtitle">Please wait</div>';
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 15000);
+    const timeoutId = setTimeout(() => controller.abort(), 30000);
 
     // Use Netlify function proxy to bypass CORS
     const response = await fetch('/.netlify/functions/buy-now', {
